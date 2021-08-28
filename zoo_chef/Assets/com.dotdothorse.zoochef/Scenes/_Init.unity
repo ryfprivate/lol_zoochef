@@ -130,6 +130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1900548202}
+  - component: {fileID: 1900548203}
   m_Layer: 0
   m_Name: InitializationLoader
   m_TagString: Untagged
@@ -151,3 +152,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1900548203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900548201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b228511484c5741b96f9be781f670b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _managersScene: {fileID: 11400000, guid: ddb972d35aea9eb4eab74d3c76cad8e4, type: 2}
+  _firstScene: {fileID: 11400000, guid: bf49784e46d282f4ab280f109ad11e5e, type: 2}
+  _firstSceneLoadChannel:
+    m_AssetGUID: 12ce2cca7029289459480539eb439c73
+    m_SubObjectName: 
+    m_SubObjectType: 

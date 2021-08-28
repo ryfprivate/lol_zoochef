@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 
-public class BaseDescriptionSO : ScriptableObject
+namespace com.dotdothorse.zoochef
 {
-    [TextArea] public string description;
+    public class BaseDescriptionSO : ScriptableObject
+    {
+        [TextArea] public string description;
+    }
 }

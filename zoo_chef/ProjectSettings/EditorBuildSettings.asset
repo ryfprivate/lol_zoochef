@@ -4,5 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/com.dotdothorse.zoochef/Scenes/_Init.unity
+    guid: 8ce3fa3b1054b6a4f8e947f1d050d9a4
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: c46766d8f833e15498cf49d0f6011843,
+      type: 2}
