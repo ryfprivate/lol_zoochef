@@ -1,18 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class UIChallenge : MonoBehaviour
+using UnityEngine.Events;
+ 
+namespace com.dotdothorse.zoochef
 {
-    // Start is called before the first frame update
-    void Start()
+    public class UIChallenge : MonoBehaviour
     {
-        
-    }
+        [SerializeField] private UITextBox _entranceTextBox;
+        [SerializeField] private GameObject _questionUI;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void RevealCustomerText(ChallengeDataSO data)
+        {
+            _entranceTextBox.gameObject.SetActive(true);
+
+            List<string> values = new List<string>();
+            values.Add("New Customer:");
+            values.Add(data.characterName);
+            _entranceTextBox.Reveal(values);
+        }
+
+        public void HideCustomerText(UnityAction action)
+        {
+            _entranceTextBox.Hide(action);
+        }
     }
 }

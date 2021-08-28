@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cdb0ed010573524b903d55b42076fd1, type: 3}
-  m_Name: Challenge_Pig
+  m_Name: Challenge_HungryPig
   m_EditorClassIdentifier: 
   description: Hungry Pig Challenge
   sceneName: 'Challenge: Hungry Pig'

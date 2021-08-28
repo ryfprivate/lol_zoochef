@@ -47,3 +47,4 @@ MonoBehaviour:
     type: 2}
   _loadLevelChannel: {fileID: 11400000, guid: e17ad38cba843cd4bb53024537d81762, type: 2}
   _fadeChannel: {fileID: 11400000, guid: ab2050d258d06eb41b2c5d76ea834442, type: 2}
+  _gameplayChannel: {fileID: 11400000, guid: 62f34e4a80621e848b32048738f3d41e, type: 2}

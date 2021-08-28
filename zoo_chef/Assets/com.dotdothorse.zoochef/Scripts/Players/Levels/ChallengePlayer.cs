@@ -7,35 +7,65 @@ namespace com.dotdothorse.zoochef
 {
     public class ChallengePlayer : MonoBehaviour
     {
-        [SerializeField] private UIChallenge _uiChallenge;
+        [Header("Data")]
+        [SerializeField] private ChallengeDataSO _data;
 
+        [Header("UI")]
+        [SerializeField] private UIChallenge _uiChallenge;
+        [SerializeField] private UIBackgroundScreen _uiBackgroundScreen;
+
+        [Header("GameObjects")]
         [SerializeField] private Camera _cam;
         [SerializeField] private List<Transform> _backgrounds;
+        [SerializeField] private AnimalController _animalController;
 
-        public bool start = false;
+        [Header("Listening to")]
+        [SerializeField] private GameplayEventChannelSO _gameplayChannel = default;
 
-        private void Start()
+        private void OnEnable()
         {
-            _uiChallenge.gameObject.SetActive(false);
+            _gameplayChannel.OnLevelStart += StartChallenge;
+        }
+
+        private void OnDisable()
+        {
+            _gameplayChannel.OnLevelStart -= StartChallenge;
+        }
+
+        private void StartChallenge()
+        {
             StartCoroutine(MainSequence());
         }
 
         private IEnumerator MainSequence()
         {
-            while (!start)
-                yield return null;
+            float panDuration = 2f;
+            Pan(panDuration);
+            yield return new WaitForSeconds(panDuration);
 
-            float entranceDuration = 4f;
+            float entranceDuration = 2f;
+            _animalController.StartWalking();
             Entrance(entranceDuration);
             yield return new WaitForSeconds(entranceDuration);
+            _animalController.StopWalking();
 
-            _uiChallenge.gameObject.SetActive(true);
+            _uiBackgroundScreen.RevealCustomerScreen();
+            yield return new WaitForSeconds(2f);
+            _uiChallenge.RevealCustomerText(_data);
+
+            yield return new WaitForSeconds(5f);
+            _uiChallenge.HideCustomerText(
+                () => _uiBackgroundScreen.HideCustomerScreen()
+                );
+            
+            
+
         }
 
-        private void Entrance(float duration)
+        private void Pan(float duration)
         {
             _cam.gameObject.transform
-                .DOMoveX(transform.position.x - 0.3f, 4f)
+                .DOMoveX(transform.position.x - 0.3f, duration)
                 .SetEase(Ease.Linear);
 
             float moveAmount = 0.8f;
@@ -43,10 +73,18 @@ namespace com.dotdothorse.zoochef
             foreach (Transform bg in _backgrounds)
             {
                 bg
-                    .DOMoveX(bg.position.x + moveAmount, 4f)
+                    .DOMoveX(bg.position.x + moveAmount, duration)
                     .SetEase(Ease.Linear);
                 moveAmount -= 0.2f;
             }
+        }
+
+        private void Entrance(float duration)
+        {
+            GameObject animals = _animalController.gameObject;
+            animals.transform
+                .DOMoveX(animals.transform.position.x - 7f, duration)
+                .SetEase(Ease.Linear);
         }
     }
 }

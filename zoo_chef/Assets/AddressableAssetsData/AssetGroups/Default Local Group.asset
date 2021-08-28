@@ -16,7 +16,25 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: a2dca0b31ef486e46825b37dcecbf4e7
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 3e8744ff776509b4c97ed866fcb51e8f
+    m_Address: Assets/com.dotdothorse.zoochef/Art/Sprites/red.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: b360c8f145d2fb54b9945a8a232dc722
+    m_Address: Assets/com.dotdothorse.zoochef/Art/Sprites/black.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 85a129e53f95070469df637111b293c9
+    m_Address: Assets/com.dotdothorse.zoochef/Art/Sprites/blue.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 803dc7d69f98d9a4aae4087c398c8062, type: 2}
   m_SchemaSet:

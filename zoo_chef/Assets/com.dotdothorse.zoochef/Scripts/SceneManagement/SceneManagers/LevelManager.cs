@@ -34,7 +34,8 @@ namespace com.dotdothorse.zoochef
 
         private void StartLevel()
         {
-            _fadeChannel.FadeIn(3f);
+            _fadeChannel.FadeIn(1f);
+            _gameplayChannel.StartLevel();
         }
     }
 }
