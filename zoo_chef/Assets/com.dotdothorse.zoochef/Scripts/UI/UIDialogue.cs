@@ -4,15 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
+using DG.Tweening;
  
 namespace com.dotdothorse.zoochef
 {
     public class UIDialogue : MonoBehaviour
     {
         [SerializeField] private GameObject _dimmed;
-        [SerializeField] private Image _image;
         [SerializeField] private TextMeshProUGUI _textBox;
-        [SerializeField] private Button _button;
 
         public void HideEntire()
         {
@@ -24,26 +23,17 @@ namespace com.dotdothorse.zoochef
         {
             _dimmed.gameObject.SetActive(false);
         }
+        
+        public void HideChat()
+        {
+            gameObject.SetActive(false);
+
+        }
 
         public void RevealEntire()
         {
             _dimmed.gameObject.SetActive(true);
             gameObject.SetActive(true);
-        }
-
-        public void RegisterButton(UnityAction action)
-        {
-            _button.onClick.AddListener(action);
-        }
-
-        public void DeregisterButton()
-        {
-            _button.onClick.RemoveAllListeners();
-        }
-
-        public void SetSprite(Sprite sprite)
-        {
-            _image.sprite = sprite;
         }
 
         public void SetText(string sentence)

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace com.dotdothorse.zoochef
@@ -6,12 +7,21 @@ namespace com.dotdothorse.zoochef
     [CreateAssetMenu(menuName = "Event Channels/Dialogue")]
     public class DialogueEventChannelSO : BaseDescriptionSO
     {
+        public UnityAction OnQueueReady;
         public UnityAction OnDialogueDone;
         public UnityAction OnRequestStart;
-        public UnityAction OnRequestHide;
-        public UnityAction OnRequestReset;
         public UnityAction OnRequestNextLine;
-        public UnityAction<DialogueSequenceSO> OnRequestEnqueue;
+        public UnityAction OnRequestHide;
+        public UnityAction OnRequestHideDimmed;
+        public UnityAction OnRequestHideChat;
+        public UnityAction OnRequestReset;
+        public UnityAction<List<DialogueSequenceSO>> OnRequestFillUp;
+
+        public void QueueReady()
+        {
+            if (OnQueueReady != null)
+                OnQueueReady.Invoke();
+        }
 
         public void DialogueDone()
         {
@@ -25,10 +35,30 @@ namespace com.dotdothorse.zoochef
                 OnRequestStart.Invoke();
         }
 
+        public void RequestNextLine()
+        {
+            if (OnRequestNextLine != null)
+            {
+                OnRequestNextLine.Invoke();
+            }
+        }
+
         public void RequestHide()
         {
             if (OnRequestHide != null)
                 OnRequestHide.Invoke();
+        }
+
+        public void RequestHideDimmed()
+        {
+            if (OnRequestHideDimmed != null)
+                OnRequestHideDimmed.Invoke();
+        }
+
+        public void RequestHideChat()
+        {
+            if (OnRequestHideChat != null)
+                OnRequestHideChat.Invoke();
         }
 
         public void RequestReset()
@@ -37,10 +67,10 @@ namespace com.dotdothorse.zoochef
                 OnRequestReset.Invoke();
         }
 
-        public void RequestEnqueue(DialogueSequenceSO dialogueSequence)
+        public void RequestFillUp(List<DialogueSequenceSO> sequences)
         {
-            if (OnRequestEnqueue != null)
-                OnRequestEnqueue.Invoke(dialogueSequence);
+            if (OnRequestFillUp != null)
+                OnRequestFillUp.Invoke(sequences);
         }
     }
 }

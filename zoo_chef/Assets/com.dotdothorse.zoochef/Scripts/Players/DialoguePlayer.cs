@@ -17,28 +17,38 @@ namespace com.dotdothorse.zoochef
         private void Awake()
         {
             dialogueSequenceQueue = new Queue<DialogueSequenceSO>();
-            HideDialogue();
+            HideAll();
         }
 
         private void OnEnable()
         {
             _dialogueChannel.OnRequestStart += StartDialogue;
-            _dialogueChannel.OnRequestEnqueue += EnqueueDialogue;
-            _dialogueChannel.OnRequestHide += HideDialogue;
+            _dialogueChannel.OnRequestNextLine += PlayNextLine;
+            _dialogueChannel.OnRequestFillUp += EnqueueSequences;
+            _dialogueChannel.OnRequestHide += HideAll;
+            _dialogueChannel.OnRequestHideDimmed += HideDimmed;
+            _dialogueChannel.OnRequestHideChat += HideChat;
             _dialogueChannel.OnRequestReset += ResetSequences;
         }
 
         private void OnDisable()
         {
             _dialogueChannel.OnRequestStart -= StartDialogue;
-            _dialogueChannel.OnRequestEnqueue -= EnqueueDialogue;
-            _dialogueChannel.OnRequestHide -= HideDialogue;
+            _dialogueChannel.OnRequestNextLine -= PlayNextLine;
+            _dialogueChannel.OnRequestFillUp -= EnqueueSequences;
+            _dialogueChannel.OnRequestHide -= HideAll;
+            _dialogueChannel.OnRequestHideDimmed -= HideDimmed;
+            _dialogueChannel.OnRequestHideChat -= HideChat;
             _dialogueChannel.OnRequestReset -= ResetSequences;
         }
 
-        private void EnqueueDialogue(DialogueSequenceSO sequence)
+        private void EnqueueSequences(List<DialogueSequenceSO> sequences)
         {
-            dialogueSequenceQueue.Enqueue(sequence);
+            foreach (DialogueSequenceSO sequence in sequences)
+            {
+                dialogueSequenceQueue.Enqueue(sequence);
+            }
+            _dialogueChannel.QueueReady();
         }
 
         private void StartDialogue()
@@ -56,8 +66,6 @@ namespace com.dotdothorse.zoochef
                 dialogueQueue.Enqueue(sentence);
             }
 
-            _uiDialogue.RegisterButton(() => PlayNextLine());
-            _uiDialogue.SetSprite(nextSequence.sprite);
             _uiDialogue.RevealEntire();
 
             PlayNextLine();
@@ -68,7 +76,6 @@ namespace com.dotdothorse.zoochef
             if (dialogueQueue.Count == 0)
             {
                 Debug.Log("Dialogue Player: Dialogue Finished");
-                _uiDialogue.HideDimmed();
                 _dialogueChannel.DialogueDone();
             }
             else
@@ -78,7 +85,17 @@ namespace com.dotdothorse.zoochef
             }
         }
 
-        private void HideDialogue()
+        private void HideDimmed()
+        {
+            _uiDialogue.HideDimmed();
+        }
+
+        private void HideChat()
+        {
+            _uiDialogue.HideChat();
+        }
+
+        private void HideAll()
         {
             _uiDialogue.HideEntire();
         }

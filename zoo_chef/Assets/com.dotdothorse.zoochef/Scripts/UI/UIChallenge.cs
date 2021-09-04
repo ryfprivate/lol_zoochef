@@ -7,7 +7,7 @@ namespace com.dotdothorse.zoochef
 {
     public class UIChallenge : MonoBehaviour
     {
-        [SerializeField] private UITextBox _entranceTextBox;
+        [SerializeField] private VisualTextBox _entranceTextBox;
         [SerializeField] private GameObject _questionUI;
 
         public void RevealCustomerText(ChallengeDataSO data)

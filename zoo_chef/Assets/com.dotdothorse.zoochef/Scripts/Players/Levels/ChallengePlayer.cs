@@ -50,16 +50,13 @@ namespace com.dotdothorse.zoochef
             _animalController.StopWalking();
 
             _uiBackgroundScreen.RevealCustomerScreen();
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
             _uiChallenge.RevealCustomerText(_data);
 
             yield return new WaitForSeconds(5f);
             _uiChallenge.HideCustomerText(
                 () => _uiBackgroundScreen.HideCustomerScreen()
                 );
-            
-            
-
         }
 
         private void Pan(float duration)
@@ -68,14 +65,14 @@ namespace com.dotdothorse.zoochef
                 .DOMoveX(transform.position.x - 0.3f, duration)
                 .SetEase(Ease.Linear);
 
-            float moveAmount = 0.8f;
+            float moveAmount = 1.2f;
 
             foreach (Transform bg in _backgrounds)
             {
                 bg
                     .DOMoveX(bg.position.x + moveAmount, duration)
                     .SetEase(Ease.Linear);
-                moveAmount -= 0.2f;
+                moveAmount -= 0.3f;
             }
         }
 

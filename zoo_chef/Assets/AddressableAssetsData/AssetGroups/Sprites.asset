@@ -23,12 +23,6 @@ MonoBehaviour:
     m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: 3d9349a8d55a13743ac2e2d67627ee73
-    m_Address: Assets/com.dotdothorse.zoochef/Art/Sprites/rabbit chef2.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 2800000, guid: 3d9349a8d55a13743ac2e2d67627ee73, type: 3}
-    m_TargetAsset: {fileID: 2800000, guid: 3d9349a8d55a13743ac2e2d67627ee73, type: 3}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 803dc7d69f98d9a4aae4087c398c8062, type: 2}
   m_SchemaSet:
