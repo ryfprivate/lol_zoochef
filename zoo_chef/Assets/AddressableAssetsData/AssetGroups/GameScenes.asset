@@ -18,11 +18,11 @@ MonoBehaviour:
   m_GUID: cf7d06bf53fc89745aa3989518fe9430
   m_SerializeEntries:
   - m_GUID: 8d866b696c5dadc49a26a4b2c8c2b565
-    m_Address: Assets/Scenes/Levels/Challenges/HungryPig.unity
+    m_Address: Assets/Scenes/Levels/2_Challenge_HungryPig.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 102900000, guid: 8d866b696c5dadc49a26a4b2c8c2b565, type: 3}
-    m_TargetAsset: {fileID: 102900000, guid: 8d866b696c5dadc49a26a4b2c8c2b565, type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 31b4da34c1b38fe40b552b74069c59ac
     m_Address: Assets/Scenes/Levels/1_Lesson_Basics.unity
     m_ReadOnly: 0

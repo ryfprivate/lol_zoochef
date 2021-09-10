@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: 
   characterName: HungryPig
+  request: Each meal to be "greater than" the last.

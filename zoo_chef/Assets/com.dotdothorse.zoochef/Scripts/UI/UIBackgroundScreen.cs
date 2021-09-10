@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
@@ -22,10 +23,28 @@ namespace com.dotdothorse.zoochef
             _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
-        private void LoadCustomerScreen()
+        private void LoadCustomerScreen(float duration)
         {
             _currentSpriteHandle = _customerScreenSpriteReference.LoadAssetAsync<Sprite>();
-            _currentSpriteHandle.Completed += SetSprite;
+            _currentSpriteHandle.Completed +=
+                (AsyncOperationHandle<Sprite> obj) => {
+                    _spriteRenderer.sprite = obj.Result;
+                    _spriteRenderer
+                        .DOFade(1, duration)
+                        .SetEase(Ease.InExpo);
+                };
+        }
+
+        private void LoadVictoryScreen(float duration)
+        {
+            _currentSpriteHandle = _victoryScreenSpriteReference.LoadAssetAsync<Sprite>();
+            _currentSpriteHandle.Completed +=
+                (AsyncOperationHandle<Sprite> obj) => {
+                    _spriteRenderer.sprite = obj.Result;
+                    _spriteRenderer
+                        .DOFade(1, duration)
+                        .SetEase(Ease.InExpo);
+                };
         }
 
         private IEnumerator UnloadSprite(float wait)
@@ -38,9 +57,14 @@ namespace com.dotdothorse.zoochef
             }
         }
 
-        public void RevealCustomerScreen()
+        public void RevealVictoryScreen(float duration)
         {
-            LoadCustomerScreen();
+            LoadVictoryScreen(duration);
+        }
+
+        public void RevealCustomerScreen(float duration)
+        {
+            LoadCustomerScreen(duration);
         }
 
         public void HideCustomerScreen()
@@ -50,14 +74,6 @@ namespace com.dotdothorse.zoochef
                 .DOFade(0, fadeDuration)
                 .SetEase(Ease.OutExpo);
             StartCoroutine(UnloadSprite(fadeDuration));
-        }
-
-        void SetSprite(AsyncOperationHandle<Sprite> obj)
-        {
-            _spriteRenderer.sprite = obj.Result;
-            _spriteRenderer
-                .DOFade(1, 1f)
-                .SetEase(Ease.InExpo);
         }
     }
 }

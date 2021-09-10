@@ -96,7 +96,6 @@ namespace com.dotdothorse.zoochef
                 }
             }
 
-            gameObject.SetActive(false);
             action();
         }
     }

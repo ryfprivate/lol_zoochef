@@ -16,7 +16,15 @@ namespace com.dotdothorse.zoochef
             }
         }
 
-        public void StopWalking()
+        public void StartEating()
+        {
+            foreach (AnimalAnimation animal in _animals)
+            {
+                animal.Eat();
+            }
+        }
+
+        public void StartIdling()
         {
             foreach (AnimalAnimation animal in _animals)
             {

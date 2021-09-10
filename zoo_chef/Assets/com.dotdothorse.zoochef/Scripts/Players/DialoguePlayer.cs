@@ -42,8 +42,18 @@ namespace com.dotdothorse.zoochef
             _dialogueChannel.OnRequestReset -= ResetSequences;
         }
 
-        private void EnqueueSequences(List<DialogueSequenceSO> sequences)
+        private void EnqueueSequences(List<DialogueSequenceSO> sequences, bool atBottom)
         {
+            Vector2 pos;
+            if (atBottom)
+            {
+                pos = new Vector2(0, -175);
+            } else
+            {
+                pos = new Vector2(0, 175);
+            }
+            _uiDialogue.GetComponent<RectTransform>().anchoredPosition = pos;
+
             foreach (DialogueSequenceSO sequence in sequences)
             {
                 dialogueSequenceQueue.Enqueue(sequence);

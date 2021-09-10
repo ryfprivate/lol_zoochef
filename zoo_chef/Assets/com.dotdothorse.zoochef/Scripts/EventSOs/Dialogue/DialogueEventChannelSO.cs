@@ -15,7 +15,7 @@ namespace com.dotdothorse.zoochef
         public UnityAction OnRequestHideDimmed;
         public UnityAction OnRequestHideChat;
         public UnityAction OnRequestReset;
-        public UnityAction<List<DialogueSequenceSO>> OnRequestFillUp;
+        public UnityAction<List<DialogueSequenceSO>, bool> OnRequestFillUp;
 
         public void QueueReady()
         {
@@ -67,10 +67,10 @@ namespace com.dotdothorse.zoochef
                 OnRequestReset.Invoke();
         }
 
-        public void RequestFillUp(List<DialogueSequenceSO> sequences)
+        public void RequestFillUp(List<DialogueSequenceSO> sequences, bool atBottom = true)
         {
             if (OnRequestFillUp != null)
-                OnRequestFillUp.Invoke(sequences);
+                OnRequestFillUp.Invoke(sequences, atBottom);
         }
     }
 }

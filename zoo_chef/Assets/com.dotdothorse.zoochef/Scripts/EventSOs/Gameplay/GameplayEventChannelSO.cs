@@ -7,12 +7,19 @@ namespace com.dotdothorse.zoochef
     public class GameplayEventChannelSO : BaseDescriptionSO
     {
         public UnityAction OnLevelStart;
+        public UnityAction OnChallengeCompleted;
         public UnityAction OnLevelFinished;
 
         public void StartLevel()
         {
             if (OnLevelStart != null)
                 OnLevelStart.Invoke();
+        }
+
+        public void ChallengeCompleted()
+        {
+            if (OnChallengeCompleted != null)
+                OnChallengeCompleted.Invoke();
         }
 
         public void LevelFinished()

@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 556355e48a04a434790207802b91bc10, type: 3}
-  m_Name: 9_Equals
+  m_Name: 1_Challenge
   m_EditorClassIdentifier: 
   sentences:
-  - '''='' when the left is "equal to" the right.'
-  - Try changing the numerators to see which operators are used.
+  - Remember these operators?
+  - Your job is to select the right one for each pair of fractions.
+  - When you are ready, click play.

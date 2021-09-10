@@ -9,7 +9,8 @@ namespace com.dotdothorse.zoochef
     {
         private Vector3 scale;
         public RectTransform rect;
-        private void Awake()
+
+        public virtual void Awake()
         {
             rect = GetComponent<RectTransform>();
             scale = transform.localScale;
