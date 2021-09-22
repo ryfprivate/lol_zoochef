@@ -1,28 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using TMPro;
- 
-namespace com.dotdothorse.zoochef
-{
-    public class VisualFraction : VisualLabel
-    {
-        [SerializeField] private TextMeshProUGUI _numerator;
-        [SerializeField] private TextMeshProUGUI _denominator;
-
-        public int numerator;
-        public int denominator;
-
-        public void SetValues(int num, int den)
-        {
-            numerator = num;
-            denominator = den;
-
-            Hide();
-            _numerator.text = numerator.ToString();
-            _denominator.text = denominator.ToString();
-            Reveal();
-        }
-
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:876c686b0a8cdfd3b628d93419c9d9264b5de7fc9db244043feca43408f48fc8
+size 669
