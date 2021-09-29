@@ -1,18 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Cube : MonoBehaviour {
-
-	public float speed = 100f;
-	// Use this for initialization
-	void Start () {
-
-	}
-
-	// Update is called once per frame
-	void Update () {
-		transform.Rotate(Vector3.up, speed * Time.deltaTime);
-		transform.Rotate(Vector3.left, speed * Time.deltaTime);
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:789c462df9f1658c0843dd7ef459d67ddbb652ca1933291d961566516450d6c1
+size 375

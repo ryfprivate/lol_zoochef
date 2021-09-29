@@ -9,43 +9,141 @@
     }
   },
   "en": {
-    "welcome": "Welcome!",
-    "readyToPlay": "Are you ready to play?",
-    "greatJob": "Great job!",
-    "pressContinue": "Press the next button to continue.",
-    "onePlusOne": "One + One = Two",
-    "newGame": "New Game",
-    "continue": "Continue",
-    "pantry": "Pantry",
-    "purchasePan": "Purchase Pan  <color=#F9DD3B>{0}</color>",
-    "autoSave": "...Auto Saving Complete"
-  },
-  "es": {
-    "welcome": "¡Bienvenido!",
-    "readyToPlay": "¿Estás listo para jugar?",
-    "greatJob": "¡Gran trabajo!",
-    "pressContinue": "Presione el botón 'siguiente' para continuar.",
-    "onePlusOne": "Uno + Uno = Dos"
-  },
-  "zh": {
-    "welcome": "欢迎！",
-    "readyToPlay": "你准备好玩吗",
-    "greatJob": "做得好！",
-    "pressContinue": "按“下一步”按钮继续。",
-    "onePlusOne": "一+一=二"
-  },
-  "jp": {
-    "welcome": "ようこそ!",
-    "readyToPlay": "あなたは遊ぶ準備ができていますか？",
-    "greatJob": "よくやった！",
-    "pressContinue": "続行するには '次へ'ボタンを押してください。",
-    "onePlusOne": "1 + 1 = 2"
-  },
-  "ru": {
-    "welcome": "Добро пожаловать!",
-    "readyToPlay": "Вы готовы играть?",
-    "greatJob": "Отличная работа!",
-    "pressContinue": "Нажмите следующую кнопку, чтобы продолжить.",
-    "onePlusOne": "один + один"
+    "newGameButton": "New Game",
+    "continueButton": "Continue",
+    "lesson_basics": [
+      [
+        "I heard you wanted to become a zoochef?",
+        "Let's begin then."
+      ],
+      [
+        "When we have 'one' of 'something'.\nWe call it a 'whole'."
+      ],
+      [
+        "Fractions represent equal parts of a 'whole."
+      ],
+      [
+        "The top part of a fraction is called the 'numerator'.",
+        "It means how many equal parts 'a fraction has'."
+      ],
+      [
+        "Try changing the numerator and see what happens."
+      ],
+      [
+        "When we compare a fraction with another. \nWe use these three operators."
+      ],
+      [
+        "'>' when the left is 'greater than' the right."
+      ],
+      [
+        "'<' when the left is 'less than' the right."
+      ],
+      [
+        "'=' when the left is 'equal to' the right.",
+        "Try changing the numerators to see which operators are used."
+      ],
+      [
+        "<!!!><!!!>",
+        "I'll explain the bottom part later. \nOur first customer is here!"
+      ]
+    ],
+    "challenge_hungryPig": [
+      [
+        "Remember these operators?",
+        "Your job is to select the right one for each pair of fractions.",
+        "When you are ready, click play."
+      ]
+    ],
+    "lesson_denominator": [
+      [
+        "You are starting to become a zoochef.",
+        "But it's not time to celebrate yet, we have got more customers coming."
+      ],
+      [
+        "Last time I showed you the top part of a fraction: the numerator.",
+        "You used the operators to compare fractions with different numerators."
+      ],
+      [
+        "The bottom part of a fraction is known as the 'denominator'.",
+        "It means how many parts a whole 'is divided into'.",
+        "Now try changing the denominator to see how the whole changes."
+      ],
+      [
+        "Notice how the pizza slice becomes thinner/smaller when the denominator becomes greater.",
+        "The greater the denominator is, the smaller the unit fraction becomes."
+      ],
+      [
+        "<!!!><!!!>"
+      ]
+    ],
+    "challenge_pickyAlpaca": [
+      [
+        "Our customer here has a neck that is too thin to eat some foods."
+      ],
+      [
+        "This fraction is the 'biggest' portion that they can eat.",
+        "Your job is to select all fractions that are 'smaller than' this fraction.",
+        "Keep in mind what it means for a fraction to be smaller.",
+        "When you are ready, click play."
+      ],
+      [
+        "<!!!><!!!>"
+      ],
+      [
+        "This customer is even more picky! \n(Like father like son)",
+        "Before we serve him, I need to show you a technique."
+      ]
+    ],
+    "lesson_rewriteDenominator": [
+      [
+        "For unit fractions: the bigger the denominator, the smaller the fraction.",
+        "But what if the numerator is not 1?"
+      ],
+      [
+        "With different numerators and denominators, it becomes much harder to compare normally.",
+        "Luckily there is a way to rewrite these fractions so that their denominators are exactly the same.",
+        "Let me show you the steps."
+      ],
+      [
+        "For fraction 1, times both the top and the bottom by the denominator of fraction 2."
+      ],
+      [
+        "For fraction 2, times both the top and the bottom by the denominator of fraction 1."
+      ],
+      [
+        "Now that both fractions have the same denominator, it is easier to tell which one is greater.",
+        "For this customers, you will encounter many fractions that have different numerators and denominators.",
+        "Good luck!"
+      ]
+    ],
+    "lesson_review": [
+      [
+        "Well done today!"
+      ],
+      [
+        "For the Hungry Pig, you compared fractions with different numerators using the 3 operators."
+      ],
+      [
+        "For the Picky Alpaca, you compared unit fractions with different denominators."
+      ],
+      [
+        "Then when the Papa Alpaca customer arrived,",
+        "You were able to compare fractions with different numerators and denominators by rewriting them.",
+        "I am happy to announce that I have nothing else to teach you. You are now a fully fledged Zoo Chef!",
+        "<!!!><!!!>"
+      ]
+    ],
+    "challenge_farmGang": [
+      [
+        "These guys have hard requests.",
+        "Each member of the 'Farm Gang' eat different amounts.",
+        "Your job is to sort the fractions into ascending order for each set of meals."
+      ],
+      [
+        "Assign a fraction to an animal by clicking the fraction, then clicking the box above the animal.",
+        "Use any method you like to compare the fractions.",
+        "Good luck!"
+      ]
+    ]
   }
 }

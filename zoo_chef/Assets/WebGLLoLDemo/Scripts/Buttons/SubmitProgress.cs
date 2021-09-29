@@ -1,23 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using LoLSDK;
-
-public class SubmitProgress : MonoBehaviour {
-
-	public Button yourButton;
-
-	void Start()
-	{
-		if (yourButton != null) {
-			Button btn = yourButton.GetComponent<Button>();
-			btn.onClick.AddListener(OnClick);
-		}
-	}
-
-	void OnClick()
-	{
-		LOLSDK.Instance.SubmitProgress(100, 100, 100);
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1585be027dd5117837dfb9b2d56cff2fd9980ad5c47c124a336f17d11d47b826
+size 408

@@ -1,22 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using LoLSDK;
-
-public class CompleteGame : MonoBehaviour {
-
-	public Button yourButton;
-
-	void Start()
-	{
-		Button btn = yourButton.GetComponent<Button>();
-		btn.onClick.AddListener(OnClick);
-	}
-
-	void OnClick()
-	{
-		LOLSDK.Instance.CompleteGame ();
-	}
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:20215d63a365fb4af21302132dc0ab097786978babbd4cde3f591451e056a4fd
+size 359

@@ -1,24 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using LoLSDK;
-
-public class SubmitAnswer : MonoBehaviour {
-
-	public Button yourButton;
-
-	void Start()
-	{
-		Button btn = yourButton.GetComponent<Button>();
-		btn.onClick.AddListener(OnClick);
-	}
-
-	void OnClick()
-	{
-		MultipleChoiceAnswer alternative = new MultipleChoiceAnswer();
-		alternative.questionId = 1.ToString();
-		alternative.alternativeId = 2.ToString();
-		LOLSDK.Instance.SubmitAnswer(alternative);
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d49d75473de9f41660d15c736937e883f593d27e11c25ab514fbc326f8a8e56d
+size 518

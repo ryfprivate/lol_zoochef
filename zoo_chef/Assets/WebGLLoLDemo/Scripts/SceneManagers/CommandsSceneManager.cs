@@ -1,20 +1,3 @@
-using UnityEngine;
-using System.Collections;
-using System;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using LoLSDK;
-
-public class CommandsSceneManager : MonoBehaviour {
-
-  public Button backButton;
-
-	void Start () {
-		Debug.Log ("starting");
-    backButton.onClick.AddListener(OnClickBack);
-	}
-
-  private void OnClickBack () {
-    SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:23ce941e9e1d16d3e07db256bf7fb1930285954ad534bea4a0284d173972543d
+size 409
