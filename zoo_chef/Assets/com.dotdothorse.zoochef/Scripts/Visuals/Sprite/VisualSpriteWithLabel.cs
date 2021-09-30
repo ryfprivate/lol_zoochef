@@ -1,32 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
- 
-namespace com.dotdothorse.zoochef
-{
-    public class VisualSpriteWithLabel : MonoBehaviour
-    {
-        [TextArea]
-        [SerializeField]
-        private string label;
-
-        [SerializeField] private VisualSprite _sprite;
-        [SerializeField] private VisualTextBox _textBox;
-
-        public void Reveal()
-        {
-            _sprite.Reveal();
-
-            List<string> list = new List<string>();
-            list.Add(label);
-            _textBox.Reveal(list);
-        }
-
-        public void Hide()
-        {
-            _sprite.Hide();
-
-            _textBox.Hide(() => { });
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:abeb700c7dba2d6f443f6bfa671c7013c93c13caf7759fcb1d9fb4c925d43ca8
+size 715

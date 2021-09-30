@@ -1,28 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
- 
-namespace com.dotdothorse.zoochef
-{
-    public class UIChallenge : MonoBehaviour
-    {
-        [SerializeField] private VisualTextBox _entranceTextBox;
-        [SerializeField] private GameObject _questionUI;
-
-        public void RevealCustomerText(ChallengeDataSO data)
-        {
-            _entranceTextBox.gameObject.SetActive(true);
-
-            List<string> values = new List<string>();
-            values.Add("New Customer:");
-            values.Add(data.characterName);
-            _entranceTextBox.Reveal(values);
-        }
-
-        public void HideCustomerText(UnityAction action)
-        {
-            _entranceTextBox.Hide(action);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b10379072bad1194e076bb1570095223751e9aeb79cf923da3106ee96b3f3900
+size 837
