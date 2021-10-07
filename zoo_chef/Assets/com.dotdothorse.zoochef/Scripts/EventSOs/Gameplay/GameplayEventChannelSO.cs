@@ -1,31 +1,3 @@
-﻿using UnityEngine;
-using UnityEngine.Events;
-
-namespace com.dotdothorse.zoochef
-{
-    [CreateAssetMenu(menuName = "Event Channels/Gameplay")]
-    public class GameplayEventChannelSO : BaseDescriptionSO
-    {
-        public UnityAction OnLevelStart;
-        public UnityAction OnChallengeCompleted;
-        public UnityAction OnLevelFinished;
-
-        public void StartLevel()
-        {
-            if (OnLevelStart != null)
-                OnLevelStart.Invoke();
-        }
-
-        public void ChallengeCompleted()
-        {
-            if (OnChallengeCompleted != null)
-                OnChallengeCompleted.Invoke();
-        }
-
-        public void LevelFinished()
-        {
-            if (OnLevelFinished != null)
-                OnLevelFinished.Invoke();
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:96363af63a4b95b9a4277e9fc834de8d66e9181f9a07bef46eb9558628626131
+size 831

@@ -1,31 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Sprites
-  m_EditorClassIdentifier: 
-  m_GroupName: Sprites
-  m_Data:
-    m_SerializedData: []
-  m_GUID: 1149f6b275a8afd40aa0929bf3de313b
-  m_SerializeEntries:
-  - m_GUID: c6e399dbdb7496e4e9b1d464172b73e8
-    m_Address: Assets/Art/Sprites/Background_01.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  m_ReadOnly: 0
-  m_Settings: {fileID: 11400000, guid: 803dc7d69f98d9a4aae4087c398c8062, type: 2}
-  m_SchemaSet:
-    m_Schemas:
-    - {fileID: 11400000, guid: eda3019c5ce331a4cb523146686131b9, type: 2}
-    - {fileID: 11400000, guid: cc5d4fbf1f43eb24db8ee40ab00a5147, type: 2}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b2d898021fca82c0c69fa31b480db37497a180d7e807e7e27cc871b3ebc4ac8f
+size 798
